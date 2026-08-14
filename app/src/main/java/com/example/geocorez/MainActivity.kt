@@ -30,6 +30,18 @@ import com.mapbox.maps.plugin.LocationPuck2D
 import com.mapbox.maps.plugin.locationcomponent.location
 
 class MainActivity : AppCompatActivity() {
+    //variables para reconocer elementos en layout
+    private lateinit var mapView: MapView
+    private lateinit var latitudeTextView: TextView
+    private lateinit var longitudeTextView: TextView
+    private lateinit var locationManager: LocationManager
+
+    private val locationPermissionRequestCode = 1
+    private val locationUpdateInterval = 1000L
+
+    // Para el control de la vista
+    private var isFirstLocationUpdate = true
+    private var locationListener: LocationListener? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
