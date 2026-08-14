@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Geocorez3</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiXjJvbmVzYjljOWJmOSJiiwiYSI6ImNtAya3ExaXNlNnNnNnNnNnNnNnNnNzM0q.YqB49933t7JLyDVV6ZzEww</string>
+</resources>
