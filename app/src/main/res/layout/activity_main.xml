@@ -11,6 +11,8 @@
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+    <!-- Componente de mapa de MapBox que ocupa toda la pantalla -->
+    <!-- @+id/mapView: crea un ID único para referenciar en código Java/Kotlin -->
 
     <!-- Texto para mostrar la Latitud -->
     <TextView
