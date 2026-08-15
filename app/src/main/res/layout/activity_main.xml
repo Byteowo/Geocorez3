@@ -6,42 +6,55 @@
                                                    android:layout_height="match_parent"
                                                    tools:context=".MainActivity">
 
-    <!-- El mapa de Mapbox -->
+    <!-- El mapa de Mapbox que ocupa toda la pantalla -->
     <com.mapbox.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-    <!-- Componente de mapa de MapBox que ocupa toda la pantalla -->
-    <!-- @+id/mapView: crea un ID único para referenciar en código Java/Kotlin -->
 
-    <!-- Texto para mostrar la Latitud -->
-    <TextView
-            android:id="@+id/latitudeTextView"
+    <!-- Contenedor principal vertical en la esquina inferior izquierda -->
+    <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Latitud: --"
-            android:textSize="16sp"
-            android:background="#80000000"
-            android:textColor="@android:color/white"
-            android:padding="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="16dp" />
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-    <!-- Texto para mostrar la Longitud -->
-    <TextView
-            android:id="@+id/longitudeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Longitud: --"
-            android:textSize="16sp"
-            android:background="#80000000"
-            android:textColor="@android:color/white"
-            android:padding="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/latitudeTextView"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="16dp" />
+        <!-- Recuadro verde para la Latitud -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#67C090"
+                android:padding="8dp"
+                android:layout_marginBottom="8dp">
+
+            <TextView
+                    android:id="@+id/latitudeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Latitud: 0.000000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Recuadro verde para la Longitud -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#67C090"
+                android:padding="8dp">
+
+            <TextView
+                    android:id="@+id/longitudeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Longitud: 0.000000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
